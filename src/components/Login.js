@@ -106,7 +106,7 @@ const Login = () => {
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="p-4 py-8 xl:p-16 rounded-lg flex flex-col absolute text-white my-36 mx-auto right-0 left-0 w-11/12 xl:w-[450px] bg-black bg-opacity-80"
+        className="p-4 py-8 sm:p-16 rounded-lg flex flex-col absolute text-white my-36 mx-auto right-0 left-0 w-11/12 sm:w-[450px] bg-black bg-opacity-80"
       >
         <h2 className="text-3xl font-semibold mb-8">
           {isSignInForm ? "Sign In" : "Sign Up"}
@@ -116,7 +116,7 @@ const Login = () => {
             ref={name}
             type="text"
             placeholder="Full Name"
-            className="p-3 mb-4 bg-[#333333] placeholder:text-[#8C8C8C] rounded-md"
+            className="p-3 mb-4 bg-[#333333] focus:bg-[#494949] placeholder:text-[#8C8C8C] rounded-md"
           />
         )}
         <input
