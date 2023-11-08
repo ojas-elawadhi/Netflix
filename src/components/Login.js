@@ -80,7 +80,7 @@ const Login = () => {
           const errorMessage = error.message;
           setErrorMessage(
             errorCode == "auth/invalid-login-credentials" &&
-              "Error: User does not exist"
+              "Error: Invalid Id or Password"
           );
         });
     }
@@ -130,7 +130,7 @@ const Login = () => {
           type="password"
           placeholder="Password"
           className={`${
-            errorMessage == "Please enter a valid password"
+            errorMessage == "Password must have atleast 8 characters"
               ? "border-b-[#e87c03]  border-b-2"
               : ""
           } focus:outline-none p-3 mb-5 bg-[#333333] focus:bg-[#494949] placeholder:text-[#8C8C8C] rounded-md`}

@@ -7,11 +7,11 @@ const SecondaryContainer = () => {
 
   return (
     <div className="bg-[#141414]  ">
-      <div className="-mt-52 relative z-30">
+      <div className="-mt-52 pb-40 relative z-30">
+        <MovieList title={"Popular"} movies={movies?.popularMovies} />
+        <MovieList title={"Top Rated"} movies={movies?.topRatedMovies} />
         <MovieList title={"Now Playing"} movies={movies?.nowPlayingMovies} />
-        <MovieList title={"Trending"} movies={movies?.nowPlayingMovies} />
-        <MovieList title={"Popular"} movies={movies?.nowPlayingMovies} />
-        <MovieList title={"Comedy"} movies={movies?.nowPlayingMovies} />
+        <MovieList title={"Upcoming"} movies={movies?.upcomingMovies} />
       </div>
     </div>
   );
