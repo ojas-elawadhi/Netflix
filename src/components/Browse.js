@@ -3,15 +3,23 @@ import Header from "./Header";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import MainVideoContainer from "./MainVideoContainer";
 import SecondaryContainer from "./SecondaryContainer";
-
+import Search from "./Search";
+import { useSelector } from "react-redux";
 const Browse = () => {
+  const showSearch = useSelector((store) => store.search.showSearch);
   useNowPlayingMovies();
 
   return (
-    <div className="bg-black">
+    <div className="">
       <Header />
-      <MainVideoContainer />
-      <SecondaryContainer />
+      {showSearch ? (
+        <Search />
+      ) : (
+        <>
+          <MainVideoContainer />
+          <SecondaryContainer />
+        </>
+      )}
     </div>
   );
 };

@@ -97,12 +97,12 @@ const Login = () => {
           alt=""
         />
         <div className="inset-0 z-10">
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="absolute inset-0 bg-[#141414] opacity-50"></div>
         </div>
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="p-4 py-8 sm:p-16 rounded-lg flex flex-col absolute text-white my-36 mx-auto right-0 left-0 w-11/12 sm:w-[450px] bg-black bg-opacity-80"
+        className="p-4 py-8 sm:p-16 rounded-lg flex flex-col absolute text-white my-36 mx-auto right-0 left-0 w-11/12 sm:w-[450px] bg-[#141414] bg-opacity-80"
       >
         <h2 className="text-3xl font-semibold mb-8">
           {isSignInForm ? "Sign In" : "Sign Up"}
@@ -139,7 +139,7 @@ const Login = () => {
         <p className="text-[#e87c03] font-semibold">{errorMessage}</p>
 
         <button
-          className="p-2 mb-6 mt-5 bg-[#E50914] font-medium text-md rounded-md"
+          className="p-3 mb-6 mt-5 bg-[#E50914] font-medium text-md rounded-md"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
