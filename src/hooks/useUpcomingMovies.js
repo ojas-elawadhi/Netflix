@@ -12,7 +12,6 @@ const useUpcomingMovies = () => {
     );
 
     const json = await data.json();
-    console.log(json,"popular")
     dispatch(addUpcomingMovies(json.results));
   };
 
