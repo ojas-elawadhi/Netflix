@@ -26,7 +26,7 @@ const MoviePreviewCard = ({ id, genre }) => {
     window.triggerFullscreen(); // Invoking openFullscreen method
   };
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[220%] h-[44vh] bg-[#181818] rounded-lg z-50 overflow-auto preview-box-shadow">
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[220%] h-3/7 bg-[#181818] rounded-lg z-50 preview-box-shadow">
       <div className="w-full">
         <PreviewCardTrailer movieId={id} />
       </div>

@@ -18,7 +18,7 @@ const ProfileModal = () => {
   };
   return (
     <div className=" text-white absolute top-14 right-[2.5vw] w-40 rounded-sm py-2 opacity-90 cursor-pointer">
-      <div className="bg-black p-3 space-y-3">
+      <div className="bg-black p-3 space-y-4 text-sm">
         <div className="flex gap-6">
           <div className="w-3 h-3">
             <svg
