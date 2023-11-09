@@ -26,7 +26,7 @@ const MoviePreviewCard = ({ id, genre }) => {
     window.triggerFullscreen(); // Invoking openFullscreen method
   };
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[220%] h-[45vh] bg-[#181818] rounded-lg z-50 overflow-auto preview-box-shadow">
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[220%] h-[44vh] bg-[#181818] rounded-lg z-50 overflow-auto preview-box-shadow">
       <div className="w-full">
         <PreviewCardTrailer movieId={id} />
       </div>
@@ -49,7 +49,7 @@ const MoviePreviewCard = ({ id, genre }) => {
             </div>
           </div>
         </div>
-        <div className="flex pt-4">
+        <div className="flex pt-7">
           {genreNames?.map((genre, index) => (
             <div className="flex justify-center items-center">
               <div className="text-white font-semibold text-md">

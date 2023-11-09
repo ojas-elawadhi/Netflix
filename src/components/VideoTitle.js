@@ -11,12 +11,12 @@ const VideoTitle = ({ title, overview }) => {
       <div className="flex">
         <button
           onClick={handlePlayClick}
-          className="bg-white flex font-semibold text-black p-2 px-10 text-xl rounded-lg hover:bg-opacity-80"
+          className="bg-white flex font-semibold text-black p-2 px-10 text-xl rounded-md hover:bg-opacity-80"
         >
           {" "}
           <img width="34" height="24" src="https://img.icons8.com/material-sharp/24/play--v1.png" alt="play--v1"/> Play
         </button>
-        <button className="bg-[#6D6D6E] bg-opacity-70 font-semibold text-white p-2 px-10 text-xl rounded-lg mx-2 hover:bg-opacity-40">
+        <button className="bg-[#6D6D6E] bg-opacity-70 font-semibold text-white p-2 px-10 text-xl rounded-md mx-2 hover:bg-opacity-40">
           More Info
         </button>
       </div>

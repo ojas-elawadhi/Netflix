@@ -16,14 +16,16 @@ const Header = () => {
   const dispatch = useDispatch();
   const [showProfile, setShowProfile] = useState(false);
   const user = useSelector((store) => store.user);
- 
+  const currentLocation = window.location.pathname;
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         const { uid, email, displayName } = user;
         dispatch(addUser({ uid: uid, email: email, displayName: displayName }));
-        navigate("/browse");
+        if(currentLocation==="/"){
+          navigate("/browse");
+        }
       } else {
         // User is signed out
         dispatch(removeUser());
@@ -54,7 +56,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="sticky top-0 relative z-50">
+    <div className="sticky top-0 z-50">
       <div
         className={`${
           user ? " max-h-14" : "min-h-24"
@@ -64,13 +66,14 @@ const Header = () => {
       >
         <div className="flex gap-8">
           <img
-            className={`${user ? "w-28 h-12 ml-[2vw]" : "w-32 sm:w-52"}`}
+            className={`${user ? "w-28 h-12 ml-[2vw]" : "w-32 sm:w-52"} cursor-pointer`}
             src={NETFLIX_LOGO}
             alt="Netflix"
+            onClick={()=>navigate("/browse")}
           />
           {user && (
             <div className="flex gap-8">
-              <button className="text-white font-semibold flex items-center hover:text-[#E50914]">
+              <button className={`${currentLocation==="/browse"? "font-bold":"font-normal"} text-white flex items-center hover:text-[#E50914]`} onClick={()=>navigate("/browse")}>
                 Home
               </button>
               <button className="text-white font-semibold flex items-center hover:text-[#E50914]">
@@ -115,9 +118,6 @@ const Header = () => {
               <img className="w-5 h-5 my-3 " src={showProfile ? up : down} />
             {showProfile && <ProfileModal name={user.displayName} />}
             </div>
-            {/* <button onClick={handleSignOut} className="font-bold">
-              (Sign Out)
-            </button> */}
           </div>
         )}
       </div>
