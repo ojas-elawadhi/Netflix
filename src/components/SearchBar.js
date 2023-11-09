@@ -30,7 +30,7 @@ const SearchBar = () => {
       messages: [{ role: "user", content: gptQuery }],
       model: "gpt-3.5-turbo",
     });
-    console.log(gptResults.choices?.[0]?.message?.content.split(", "));
+    // console.log(gptResults.choices?.[0]?.message?.content.split(", "));
 
     const gptMovies = gptResults.choices?.[0]?.message?.content.split(", ");
 
@@ -38,7 +38,7 @@ const SearchBar = () => {
     //[Promise, Promise, Promise, Promise, Promise,]
 
     const tmdbData = await Promise.all(data);
-    console.log(tmdbData, "tmdb search");
+    // console.log(tmdbData, "tmdb search");
 
     dispatch(addGptMovieResult({movieNames: gptMovies, movieResults: tmdbData}));
   };
