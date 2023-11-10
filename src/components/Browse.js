@@ -19,14 +19,8 @@ const Browse = () => {
   return (
     <div className="">
       <Header />
-      {showSearch ? (
-        <Search />
-      ) : (
-        <>
-          <MainVideoContainer />
-          <SecondaryContainer />
-        </>
-      )}
+      <MainVideoContainer />
+      <SecondaryContainer />
     </div>
   );
 };

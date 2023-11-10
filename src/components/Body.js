@@ -4,6 +4,7 @@ import Login from "./Login";
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 import Account from "./Account";
+import Search from "./Search";
 
 const Body = () => {
   const appRouter = createBrowserRouter([
@@ -14,6 +15,10 @@ const Body = () => {
     {
       path: "/browse",
       element: <Browse />,
+    },
+    {
+      path: "/search",
+      element: <Search />,
     },
     {
       path: "/account",

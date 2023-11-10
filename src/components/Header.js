@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
-import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/slices/userSlice";
 import { NETFLIX_LOGO, USER_AVATAR } from "../utils/constants";
 import { toggleSearchView } from "../utils/slices/searchSlice";
@@ -39,6 +38,7 @@ const Header = () => {
 
   const handleSearch = () => {
     dispatch(toggleSearchView());
+    navigate("/search")
   };
 
   const [scrollPosition, setScrollPosition] = useState(0);

@@ -1,10 +1,12 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import GptMovieSuggestions from "./GptMovieSuggestions";
+import Header from "./Header";
 
 const Search = () => {
   return (
     <div className="">
+      <Header/>
       <div className="fixed -z-10 block bg-cover overflow-hidden overflow-clip-margin h-[100dvh] w-full">
         <img
           className="concord-img vlv-creative min-h-[100dvh] min-w-[1800px] w-[100vw] xl:w-full"
