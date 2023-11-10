@@ -7,7 +7,6 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/slices/userSlice";
@@ -61,9 +60,8 @@ const Login = () => {
         })
         .catch((error) => {
           const errorCode = error.code;
-          const errorMessage = error.message;
           setErrorMessage(
-            errorCode == "auth/email-already-in-use" && "User Already Exists!"
+            errorCode === "auth/email-already-in-use" && "User Already Exists!"
           );
         });
     } else {
@@ -78,9 +76,8 @@ const Login = () => {
         })
         .catch((error) => {
           const errorCode = error.code;
-          const errorMessage = error.message;
           setErrorMessage(
-            errorCode == "auth/invalid-login-credentials" &&
+            errorCode === "auth/invalid-login-credentials" &&
               "Error: Invalid Id or Password"
           );
         });
@@ -136,7 +133,7 @@ const Login = () => {
               type="text"
               placeholder="Email Address"
               className={`${
-                errorMessage == "Please enter a valid email address"
+                errorMessage === "Please enter a valid email address"
                   ? "border-b-[#e87c03]  border-b-2"
                   : ""
               } focus:outline-none p-3 mb-4 bg-[#333333] focus:bg-[#494949] placeholder:text-[#8C8C8C] rounded-md`}
@@ -146,7 +143,7 @@ const Login = () => {
               type="password"
               placeholder="Password"
               className={`${
-                errorMessage == "Password must have atleast 8 characters"
+                errorMessage === "Password must have atleast 8 characters"
                   ? "border-b-[#e87c03]  border-b-2"
                   : ""
               } focus:outline-none p-3 mb-5 bg-[#333333] focus:bg-[#494949] placeholder:text-[#8C8C8C] rounded-md`}

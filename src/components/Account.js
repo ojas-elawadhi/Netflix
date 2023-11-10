@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import { auth } from "../utils/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { addUser, removeUser } from "../utils/slices/userSlice";
+import {  removeUser } from "../utils/slices/userSlice";
 import { useNavigate } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -10,7 +10,6 @@ const Account = () => {
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const currentLocation = window.location.pathname;
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {

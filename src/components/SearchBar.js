@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import openai from "../utils/openai";
 import { API_OPTIONS } from "../utils/constants";
 import {

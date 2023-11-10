@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import React from "react";
 
 const userSlice = createSlice({
   name: "user",

@@ -1,12 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import MovieCard from "./MovieCard";
-import Loader from "./Loader";
 import LoaderCard from "./LoaderCard";
 
 const GptMovieSuggestions = () => {
   const gpt = useSelector((store) => store?.search);
-  const { movieResults, movieNames } = gpt;
+  const { movieResults } = gpt;
   const searchLoading = useSelector((store) => store?.search?.searchLoading);
   const cardArray = new Array(20).fill(null);
 

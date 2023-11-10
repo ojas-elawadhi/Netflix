@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
-import { signOut } from "firebase/auth";
 import { useSelector, useDispatch } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../utils/slices/userSlice";
@@ -115,7 +114,7 @@ const Header = () => {
                 {user.displayName || "User"}
               </p>
               <img className="w-8 h-8 my-2" src={USER_AVATAR} alt="usericon" />
-              <img className="w-5 h-5 my-3 " src={showProfile ? up : down} />
+              <img className="w-5 h-5 my-3 " src={showProfile ? up : down} alt="arrow" />
             {showProfile && <ProfileModal name={user.displayName} />}
             </div>
           </div>

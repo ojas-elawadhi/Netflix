@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import VideoBackground from "./VideoBackground";
 import PreviewCardTrailer from "./PreviewCardTrailer";
 import useGenreName from "../hooks/useGenreName";
 const MoviePreviewCard = ({ id, genre }) => {
