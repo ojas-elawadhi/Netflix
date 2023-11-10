@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import { API_OPTIONS } from "../utils/constants";
-import { addTrailerVideo } from "../utils/slices/moviesSlice";
 import { useDispatch, useSelector } from "react-redux";
 import useMovieTrailer from "../hooks/useMovieTrailer";
+import Loader from "./Loader";
 
 const VideoBackground = ({ movieId }) => {
   useMovieTrailer(movieId);
@@ -40,9 +39,11 @@ const VideoBackground = ({ movieId }) => {
       });
     }
   }, [trailerVideo]);
+
+  if (trailerVideo?.length === 0) return <Loader />;
+
   return (
     <div className="w-screen -mt-14">
-      {/* <button onClick={openFullscreen} className="mt-20 text-white bg-blue relative z-50">Fullscreen</button> */}
       <iframe
         ref={videoFrameRef}
         className="w-screen aspect-video "

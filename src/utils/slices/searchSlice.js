@@ -7,6 +7,7 @@ const searchSlice = createSlice({
     showSearch: false,
     movieNames: null,
     movieResults: null,
+    searchLoading: false,
   },
   reducers: {
     toggleSearchView: (state, action) => {
@@ -17,8 +18,12 @@ const searchSlice = createSlice({
       state.movieNames = movieNames;
       state.movieResults = movieResults;
     },
+    searchLoadingState: (state, action) => {
+      state.searchLoading = action.payload;
+    },
   },
 });
 
-export const { toggleSearchView, addGptMovieResult } = searchSlice.actions;
+export const { toggleSearchView, addGptMovieResult, searchLoadingState } =
+  searchSlice.actions;
 export default searchSlice.reducer;
