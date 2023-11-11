@@ -79,7 +79,7 @@ const ProfileModal = () => {
           </div>
           <p className="hover:underline">Settings</p>
         </div>
-        <p className="text-center pt-2 hover:underline -mx-3 border-t-[0.1px] border-opacity-50 hover:text-[#E50914]" onClick={handleSignOut}>
+        <p className="text-center pt-2 -mx-3 border-t-[0.1px] border-opacity-50 hover:underline hover:text-[#E50914] hover:font-semibold" onClick={handleSignOut}>
           Sign Out
         </p>
       </div>

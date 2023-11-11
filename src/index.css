@@ -11,6 +11,35 @@
   scrollbar-width: none; /* Firefox */
 }
 
+body{
+  overflow-x: hidden;
+}
+/* For Firefox */
+body {
+  scrollbar-color: #4a4a4a #f1f1f1;
+  scrollbar-width: thin;
+}
+
+/* For Internet Explorer and Edge */
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+  /* background-color: #6e6d6d;  */
+  background-color: #E50914; /* Color of the scrollbar thumb */
+  border-radius: 3px; /* Rounded corners */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #030000; /* Color of the scrollbar track */
+}
+
 .preview-box-shadow {
   box-shadow: 0 8px 6px 4px rgba(0, 0, 0, 0.1),
     0 4px 6px 4px rgba(0, 0, 0, 0.08);
