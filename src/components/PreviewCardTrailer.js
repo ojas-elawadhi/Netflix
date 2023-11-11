@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 
 import { useSelector } from "react-redux";
-import useMovieTrailer from "../hooks/useMovieTrailer";
+import usePreviewTrailer from "../hooks/usePreviewTrailer";
 
 const PreviewCardTrailer = ({ movieId }) => {
-  useMovieTrailer(movieId);
-  const trailerVideo = useSelector((store) => store.movies?.trailerVideo);
+  usePreviewTrailer(movieId);
+  const previewVideo = useSelector((store) => store.movies?.previewVideo);
   const videoFrameRef = React.useRef(null);
 
   const openFullscreen = () => {
@@ -38,14 +38,14 @@ const PreviewCardTrailer = ({ movieId }) => {
         }
       });
     }
-  }, [trailerVideo]);
+  }, [previewVideo]);
   return (
     <div className=" -mt-4">
       {/* <button onClick={openFullscreen} className="mt-20 text-white bg-blue relative z-50">Fullscreen</button> */}
       <iframe
         ref={videoFrameRef}
         className="w-full aspect-video "
-        src={`https://www.youtube.com/embed/${trailerVideo?.key}?&autoplay=1&mute=1&modestbranding=1&rel=1&showinfo=0`}
+        src={`https://www.youtube.com/embed/${previewVideo?.key}?&autoplay=1&mute=1&modestbranding=1&rel=1&showinfo=0`}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>
