@@ -47,20 +47,20 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="pt-[6.9%] flex justify-center z-40">
+    <div className="pt-[17%] sm:pt-[6.9%] flex justify-center z-40">
       <form
-        className=" w-1/2 bg-[#141414] grid grid-cols-12 "
+        className="w-5/6 sm:w-1/2 bg-[#141414] grid grid-cols-12 "
         onSubmit={(e) => e.preventDefault()}
       >
         <input
           ref={searchText}
           type="search"
           placeholder="What would you like to watch today?"
-          className="p-4 m-4  col-span-9"
+          className="pl-2 sm:p-4 m-4  col-span-9"
         />
 
         <button
-          className="py-2 col-span-3 m-4 px-4 bg-red-600 text-white rounded-lg"
+          className="py-2 col-span-3 m-4 ml-0 mr-2 sm:m-4 sm:px-4 bg-red-600 text-white rounded-lg"
           onClick={handleGptSearchClick}
         >
           Search

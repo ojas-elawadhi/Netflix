@@ -43,7 +43,7 @@ const VideoBackground = ({ movieId }) => {
   if (trailerVideo?.length === 0) return <Loader />;
 
   return (
-    <div className="w-screen -mt-14">
+    <div className="w-screen sm:-mt-14 ">
       <iframe
         ref={videoFrameRef}
         className="w-screen aspect-video "

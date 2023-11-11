@@ -22,7 +22,7 @@ const MovieCard = ({ poster_path, backdrop_path, id, genre }) => {
   };
   return (
     <div
-      className="w-40 relative "
+      className="w-28 sm:w-40 relative "
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

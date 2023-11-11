@@ -75,12 +75,12 @@ const MovieList = ({ title, movies }) => {
   }, []);
 
   return (
-    <div className="pl-12 pt-8 relative ">
+    <div className="pl-4 sm:pl-12 pt-2 sm:pt-8 relative ">
       <h1 className="text-xl font-medium py-2 text-white ">{title}</h1>
-      <div className="flex scrollbar-hide  overflow-x-hidden" id={title}>
+      <div className="flex scrollbar-hide overflow-x-scroll sm:overflow-x-hidden" id={title}>
         {scrollPosition > 0 && (
           <button
-            className="left-12 px-6 py-2 bg-[#141414] bg-opacity-70 hover:bg-opacity-90 text-white rounded absolute h-60 z-50"
+            className="hidden sm:block left-12 px-6 py-2 bg-[#141414] bg-opacity-70 hover:bg-opacity-90 text-white rounded absolute h-60 z-50"
             onClick={() => scrollElement(0.8 * -window.innerWidth)}
           >
             <img
@@ -106,7 +106,7 @@ const MovieList = ({ title, movies }) => {
         </div>
         {scrollPosition <= maxScroll && (
           <button
-            className="right-0 px-6 py-2 bg-[#141414] bg-opacity-70 hover:bg-opacity-90 text-white rounded absolute h-60 z-50 "
+            className="hidden sm:block right-0 px-6 py-2 bg-[#141414] bg-opacity-70 hover:bg-opacity-90 text-white rounded absolute h-60 z-50 "
             onClick={() => scrollElement(0.82 * window.innerWidth)}
           >
             <img

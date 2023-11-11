@@ -7,7 +7,7 @@ const LoaderCard = () => {
   return (
     <div style={blinkStyle} className="">
       <div style={blinkStyle}>
-        <div className="w-40 h-60 mx-auto bg-gray-500 shadow-md rounded-md p-4"></div>
+        <div className="w-28 sm:w-40 h-40 sm:h-60 mx-auto bg-gray-500 shadow-md rounded-md p-4"></div>
       </div>
     </div>
   );

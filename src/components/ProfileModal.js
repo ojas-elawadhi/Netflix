@@ -41,6 +41,12 @@ const ProfileModal = () => {
           </div>
           <p className="hover:underline" onClick={()=>navigate("/account")}>Account</p>
         </div>
+        <div className="flex gap-4 sm:hidden">
+          <div className="w-5 h-5">
+          <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/EBEBEB/home.png" alt="home"/>
+          </div>
+          <p className="hover:underline">Home</p>
+        </div>
         <div className="flex gap-6">
           <div className="w-3 h-3">
             <svg

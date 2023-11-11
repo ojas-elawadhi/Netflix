@@ -10,8 +10,8 @@ const GptMovieSuggestions = () => {
   const cardArray = new Array(20).fill(null);
 
   return (
-    <div className="  max-w-[90%] mx-auto bg-[#141414]  bg-opacity-90 ">
-      <div className="text-white justify-items-center items-center  mx-auto p-6 my-8 z-40 grid-container ">
+    <div className="max-w-[95%]  sm:max-w-[90%] mx-auto bg-[#141414]  bg-opacity-90 ">
+      <div className="text-white justify-items-center items-center mx-auto sm:p-6 py-6 my-8 z-40 grid-container ">
         {!searchLoading ? (
           movieResults ? (
             movieResults.map((movie) => (

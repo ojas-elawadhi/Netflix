@@ -71,7 +71,7 @@ const Header = () => {
             onClick={()=>navigate("/browse")}
           />
           {user && (
-            <div className="flex gap-8">
+            <div className="hidden sm:flex gap-8 ">
               <button className={`${currentLocation==="/browse"? "font-bold":"font-normal"} text-white flex items-center hover:text-[#E50914]`} onClick={()=>navigate("/browse")}>
                 Home
               </button>
@@ -110,7 +110,7 @@ const Header = () => {
               onMouseEnter={() => setShowProfile(true)}
               onMouseLeave={() => setShowProfile(false)}
             >
-              <p className="font-semibold my-2 text-lg text-white mr-8">
+              <p className="hidden sm:block font-semibold my-2 text-lg text-white mr-8">
                 {user.displayName || "User"}
               </p>
               <img className="w-8 h-8 my-2" src={USER_AVATAR} alt="usericon" />
