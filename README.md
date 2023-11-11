@@ -1,25 +1,6 @@
 # Netflix GPT
 
-- create react app
-- Configured TailwindCSS
-
-
-#Features:
-- HomePage (Signed Out)
-- Sign up/ Login Page
-    redirect to browse page
-
-
-- Browse(Signed In)
-    - Header
-    - Main movie 
-        Trailer in bg
-        -Title and description
-    - Movie suggestion
-        Movie list * N
-
-- NetflixGPT
-    - Search Bar
-    - Movie Suggestions
-
-
+- GPT powered Search Functionality
+- TMDB API for Movie data
+- FireBase for user Authentication
+- Tech Stack- React.js, JavaScript, TailwindCSS, Redux-Toolkit
