@@ -80,14 +80,15 @@ const MovieList = ({ title, movies }) => {
       <div className="flex scrollbar-hide overflow-x-scroll sm:overflow-x-hidden" id={title}>
         {scrollPosition > 0 && (
           <button
-            className="hidden sm:block left-12 px-6 py-2 bg-[#141414] bg-opacity-70 hover:bg-opacity-90 text-white rounded absolute h-60 z-50"
+            className="hidden sm:block left-12 px-4 py-2 bg-[#141414] bg-opacity-70 hover:bg-opacity-90 text-white rounded absolute h-60 z-50"
             onClick={() => scrollElement(0.8 * -window.innerWidth)}
           >
             <img
               width="36"
               height="36"
               src="https://img.icons8.com/android/36/FFFFFF/back.png"
-              alt="forward"
+              alt="back"
+              className="hover:scale-125"
             />
           </button>
         )}
@@ -106,7 +107,7 @@ const MovieList = ({ title, movies }) => {
         </div>
         {scrollPosition <= maxScroll && (
           <button
-            className="hidden sm:block right-0 px-6 py-2 bg-[#141414] bg-opacity-70 hover:bg-opacity-90 text-white rounded absolute h-60 z-50 "
+            className="hidden sm:block right-0 px-4 py-2 bg-[#141414] bg-opacity-70 hover:bg-opacity-90 text-white rounded absolute h-60 z-50 "
             onClick={() => scrollElement(0.82 * window.innerWidth)}
           >
             <img
@@ -114,6 +115,7 @@ const MovieList = ({ title, movies }) => {
               height="36"
               src="https://img.icons8.com/android/36/FFFFFF/forward.png"
               alt="forward"
+              className="hover:scale-125"
             />
           </button>
         )}

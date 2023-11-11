@@ -25,11 +25,11 @@ const MoviePreviewCard = ({ id, genre }) => {
     window.triggerFullscreen(); // Invoking openFullscreen method
   };
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[220%] h-3/7 bg-[#181818] rounded-lg z-50 preview-box-shadow">
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[218%]  bg-[#181818] rounded-lg z-50 preview-box-shadow">
       <div className="w-full">
         <PreviewCardTrailer movieId={id} />
       </div>
-      <div className="p-5">
+      <div className="p-3 flex justify-between">
         <div className="flex gap-2">
           <div
             className="w-9 h-9 bg-white rounded-full flex justify-center items-center cursor-pointer"
@@ -42,15 +42,15 @@ const MoviePreviewCard = ({ id, genre }) => {
               alt="play--v1"
             />
           </div>
-          <div className="w-9 h-9 border border-slate-400 rounded-full flex justify-center items-center cursor-pointer">
+          {/* <div className="w-9 h-9 border border-slate-400 rounded-full flex justify-center items-center cursor-pointer">
             <div className="text-4xl text-white font-light flex justify-center items-center -mt-2">
               +
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="flex pt-7">
+        <div className="flex ">
           {genreNames?.map((genre, index) => (
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center whitespace-nowrap truncate">
               <div className="text-white font-semibold text-md">
                 {genre} &nbsp;
               </div>
