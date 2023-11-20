@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { IMG_CDN_URL } from "../utils/constants";
 import MoviePreviewCard from "./MoviePreviewCard";
+import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ poster_path, backdrop_path, id, genre }) => {
+  const navigate = useNavigate();
   const [showMovie, setShowMovie] = useState(false);
   let enterTimer;
 
@@ -30,7 +32,7 @@ const MovieCard = ({ poster_path, backdrop_path, id, genre }) => {
         className="rounded-md cursor-pointer"
         alt="Movie Card"
         src={IMG_CDN_URL + poster_path}
-        onClick={handlePlayClick}
+        onClick={() => navigate(`/browse/${id}`)}
       />
       {showMovie && <MoviePreviewCard id={id} genre={genre} />}
     </div>

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import useMovieTrailer from "../hooks/useMovieTrailer";
 import Loader from "./Loader";
 
-const VideoBackground = ({ movieId }) => {
+const MovieDetailsVideo = ({ movieId }) => {
   useMovieTrailer(movieId);
   const trailerVideo = useSelector((store) => store.movies?.trailerVideo);
   const videoFrameRef = React.useRef(null);
@@ -43,11 +43,11 @@ const VideoBackground = ({ movieId }) => {
   if (trailerVideo?.length === 0) return <Loader />;
 
   return (
-    <div className="w-screen sm:-mt-24 ">
+    <div className="flex justify-center bg-[#141414]">
       <iframe
         ref={videoFrameRef}
-        className="w-screen aspect-video "
-        src={`https://www.youtube.com/embed/${trailerVideo?.key}?&autoplay=1&mute=1&modestbranding=1&rel=1&showinfo=0`}
+        className="w-2/3 aspect-video "
+        src={`https://www.youtube.com/embed/${trailerVideo?.key}?&autoplay=0&mute=1&modestbranding=1&rel=1&showinfo=0`}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>
@@ -55,4 +55,4 @@ const VideoBackground = ({ movieId }) => {
   );
 };
 
-export default VideoBackground;
+export default MovieDetailsVideo;
